@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Efek tulisan</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;	
+			font-family: 'Poppins', sans-serif;
+		}
+
+		body{
+			display: flex;	
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			background: #343f4f;
+		}
+		.wrapper {
+			display: inline-flex;
+		}
+		.wrapper .static-txt{
+			font-size: 	60px;
+			color: #fff;
+			font-weight: 400;
+		}
+		.wrapper .dynamic-txt{
+			margin-left: 15px;
+			height: 90px;
+			line-height: 90px;
+			overflow: hidden;
+		}
+
+		.dynamic-txt li {
+			color: #fc6d60;
+			list-style: none;
+			font-size: 60px;
+			font-weight: 500;
+			position: relative;
+			top: 0;
+			animation: slide 6s steps(4) infinite;
+		}
+
+		@keyframes slide {
+			100% {
+				top: -360px;
+			}
+		}
+
+		.dynamic-txt li span {
+			position: relative;
+		}
+		.dynamic-txt li span::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: #343f4f;
+			border-left: 2px solid #fc6d60;
+			animation: typing 1.5s steps(10) infinite;
+		}
+		@keyframes typing {
+			100% {
+				left: 100%;
+				margin: 0 -35px 0 35px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="static-txt">I'm a</div>
+		<ul class="dynamic-txt">
+			<li><span>Youtuber</span></li>
+			<li><span>Designer</span></li>
+			<li><span>Developer</span></li>
+			<li><span>Student</span></li>
+		</ul>	
+	</div>
+</body>
+</html>
