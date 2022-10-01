@@ -1,0 +1,4 @@
+lehzo\core\models\entities\Product.class
+lehzo\core\services\ProductService.class
+lehzo\core\controllers\ProductController.class
+lehzo\core\models\repos\ProductRepo.class
